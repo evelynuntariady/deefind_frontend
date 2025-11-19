@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="DeepGuard - Detect deepfake media with AI-powered analysis. 5 free detections per month, or upgrade to premium for unlimited access.">
+    <meta name="theme-color" content="#0f172a">
+    <title>DeeFind - Detect Deepfakes | Free & Premium Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+            <div id="auth-container"></div>
+        </div>
+    </div>
+
+    <!-- Limit Reached Modal -->
+    <div id="limit-modal" class="modal hidden">
+        <div class="modal-content modal-limit">
+            <button class="modal-close" onclick="closeLimitModal()">&times;</button>
+            <div class="limit-content">
+                <h2>Free Tier Limit Reached</h2>
+                <p>You've used all 5 free detections this month.</p>
+                <div class="limit-options">
+                    <div class="option">
+                        <h3>Sign In to Upgrade</h3>
+                        <p>Get unlimited detections</p>
+                        <button class="btn btn-primary" onclick="openAuthModal('login')">Sign In</button>
+                    </div>
+                    <div class="option">
+                        <h3>Create Account</h3>
+                        <p>Rp 15,000/month premium</p>
+                        <button class="btn btn-secondary" onclick="openAuthModal('register')">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
